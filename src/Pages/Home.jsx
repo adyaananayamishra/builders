@@ -1,7 +1,7 @@
 import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
 // import Slideshow from "../components/Slideshow";
-import TopSection from "../components/Topsection";
+import TopSection from "../components/TopSection";
 
 const Home = () => {
   return (
