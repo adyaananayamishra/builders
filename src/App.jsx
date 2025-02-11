@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Slideshow from "./components/Slideshow";
+import Slideshow from "./components/SlideShow";
 import PropertyListing from "./components/PropertyListings";
 import PropertyDetails from "./components/PropertyDetails";
 import PopularPlaces from "./components/PopularPlaces";

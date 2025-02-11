@@ -47,7 +47,7 @@ const Slideshow = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4">
+        <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] flex flex-col items-center justify-center text-white text-center px-4">
           <h2 className="text-3xl md:text-5xl font-bold">{slides[currentIndex].title}</h2>
           <p className="text-lg md:text-xl mt-2">{slides[currentIndex].subtitle}</p>
           <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-lg mt-4">

@@ -59,8 +59,9 @@ const Navbar = () => {
               </div>
               {activeDropdown === "properties" && (
                 <ul className="ml-4 mt-2 space-y-2 text-sm">
-                  <li><Link to="/properties/room">Room</Link></li>
-                  <li><Link to="/properties/suite">Suite</Link></li>
+                  <li><Link to="/properties/apartments">Apartments</Link></li>
+                  <li><Link to="/properties/cottage">Cottage</Link></li>
+                  <li><Link to="/properties/bunaglow">Bunaglow</Link></li>
                 </ul>
               )}
             </li>
@@ -79,12 +80,26 @@ const Navbar = () => {
                   <li><Link to="/location/khandagiri">Khandagiri</Link></li>
                   <li><Link to="/location/chandaka">Chandaka</Link></li>
                   <li><Link to="/location/jaydev-vihar">Jaydev Vihar</Link></li>
+                  <li><Link to="/location/bapuji-nagar">Bapuji Nagar</Link></li>
+                  <li><Link to="/location/rasulgarh">Rasulgarh</Link></li>
+                  <li><Link to="/location/tamando">Tamando</Link></li>
+                  <li><Link to="/location/nayapalli">Nayapalli</Link></li>
+                  <li><Link to="/location/sundarpada">Sundarpada</Link></li>
+                  <li><Link to="/location/dumduma">Dumduma</Link></li>
+                  <li><Link to="/location/ghatikia">Ghatikia</Link></li>
+                  <li><Link to="/location/samantrapur">Samantrapur</Link></li>
+                  <li><Link to="/location/jharpada">Jharpada</Link></li>
+                  <li><Link to="/location/hanspal">Hanspal</Link></li>
+                  <li><Link to="/location/chandrasekharpur">Chandrasekharpur</Link></li>
+                  <li><Link to="/location/baramunda">Baramunda</Link></li>
+                  <li><Link to="/location/palasuni">Palasuni</Link></li>
+                  <li><Link to="/location/mancheswar">Mancheswar</Link></li>
                 </ul>
               )}
             </li>
-            <li><Link to="/about" className="font-semibold">About Us</Link></li>
-            <li><Link to="/services" className="font-semibold">Services</Link></li>
-            <li><Link to="/contact" className="font-semibold">Contact Us</Link></li>
+            <li><Link to="/category" onClick={() => setIsMenuOpen(false)}>Category</Link></li>
+            <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+            <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
           </ul>
         </div>
       )}
