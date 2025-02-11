@@ -97,7 +97,7 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li><Link to="/category" onClick={() => setIsMenuOpen(false)}>Category</Link></li>
+            <li><Link to="/career" onClick={() => setIsMenuOpen(false)}>Career</Link></li>
             <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
             <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
           </ul>

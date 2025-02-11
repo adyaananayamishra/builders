@@ -30,16 +30,6 @@ const PopularPlaces = () => {
         properties: 2,
         image: "path-to-image-8.jpg",
       },
-      {
-        name: "Tamando",
-        properties: 3,
-        image: "path-to-image-9.jpg",
-      },
-      {
-        name: "Khandagiri",
-        properties: 5,
-        image: "path-to-image-10.jpg",
-      },
     ];
   
     return (

@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom";
 
 const properties = [
-  { name: "Apartments", image: "https://via.placeholder.com/300" },
-  { name: "Bungalow", image: "https://via.placeholder.com/300" },
-  { name: "Cottage", image: "https://via.placeholder.com/300" },
+  { name: "Apartments", image: "/apartment.jpg" },
+  { name: "Bungalow", image: "/bungalow.jpg" },
+  { name: "Cottage", image: "/cottage.jpg" },
 ];
 
 export default function PropertyList() {

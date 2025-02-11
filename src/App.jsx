@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Slideshow from "./components/SlideShow";
+import SearchBar from "./components/SearchBar";
 import PropertyListing from "./components/PropertyListings";
 import PropertyDetails from "./components/PropertyDetails";
 import PopularPlaces from "./components/PopularPlaces";
-import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonial";
+import Career from "./Pages/Career";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import Footer from "./components/Footer";
 import './index.css';
 
 
@@ -23,19 +26,23 @@ const App = () => {
               element={
                 <>
                   <Slideshow /> 
+                 <SearchBar/>
                   <PropertyListing/>
                   <PopularPlaces />
-                  <h1 className="text-center text-4xl mt-8">Welcome to Our Website</h1>
+                  <Testimonials/>
+                  <Footer />
                 </>
               }
             />
             <Route path="/" element={<PropertyListing />} />
             <Route path="/property/:propertyName" element={<PropertyDetails />} />
+            <Route path="/career" element={<Career />} />
+          
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>
-        <Footer />
+       
       </div>
     </Router>
   );
