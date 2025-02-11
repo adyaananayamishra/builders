@@ -1,45 +1,76 @@
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 
-// const Slideshow = () => {
-//   const images = [
-//     "https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Slide+1",
-//     "https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Slide+2",
-//     "https://via.placeholder.com/800x400/3357FF/FFFFFF?text=Slide+3",
-//   ];
+const Slideshow = () => {
+  const slides = [
+    {
+      image: "/image-1.jpg", 
+      title: "VERIFIED HOMES FOR YOU",
+      subtitle: "We evaluate, verify and list property",
+    },
+    {
+      image: "/image-2.jpg", 
+      title: "UPGRADE TO BIGGER HOME",
+      subtitle: "Looking to fulfill your dream? Upgrade to a bigger home",
+    },
+    {
+      image: "/image-3.jpg", 
+      title: "Sweet Home For Small Family",
+      subtitle: "Book your first sweet home with top amenities and enjoy your dream.",
+    },
+  ];
 
-//   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-//   const nextSlide = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-//   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
-//   const prevSlide = () => {
-//     setCurrentIndex(
-//       (prevIndex) => (prevIndex - 1 + images.length) % images.length
-//     );
-//   };
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
 
-//   return (
-//     <div className="relative w-full max-w-4xl mx-auto">
-//       <img
-//         src={images[currentIndex]}
-//         alt={`Slide ${currentIndex + 1}`}
-//         className="w-full h-64 object-cover rounded-lg"
-//       />
-//       <button
-//         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
-//         onClick={prevSlide}
-//       >
-//         &lt;
-//       </button>
-//       <button
-//         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
-//         onClick={nextSlide}
-//       >
-//         &gt;
-//       </button>
-//     </div>
-//   );
-// };
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
 
-// export default Slideshow;
+  return (
+    <div className="relative w-full h-[500px] overflow-hidden">
+      <div className="relative w-full h-full">
+        <img
+          src={slides[currentIndex].image}
+          alt="Real Estate Slide"
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4">
+          <h2 className="text-3xl md:text-5xl font-bold">{slides[currentIndex].title}</h2>
+          <p className="text-lg md:text-xl mt-2">{slides[currentIndex].subtitle}</p>
+          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-lg mt-4">
+            VIEW DETAIL
+          </button>
+        </div>
+
+       
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white"
+        >
+          ❮
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white"
+        >
+          ❯
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Slideshow;

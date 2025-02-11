@@ -1,11 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Slideshow from "./components/Slideshow";
+import PropertyListing from "./components/PropertyListings";
+import PropertyDetails from "./components/PropertyDetails";
+import PopularPlaces from "./components/PopularPlaces";
 import Footer from "./components/Footer";
-import Home from "./Pages/Home";
-import Listings from "./Pages/Listings";
-import PropertyDetails from "./Pages/PropertyDetails";
-import Contact from "./Pages/Contact.jsx";
+import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import './index.css';
+
+
 
 const App = () => {
   return (
@@ -14,9 +18,19 @@ const App = () => {
         <Navbar />
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/listings" element={<Listings />} />
-            <Route path="/property/:id" element={<PropertyDetails />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Slideshow /> 
+                  <PropertyListing/>
+                  <PopularPlaces />
+                  <h1 className="text-center text-4xl mt-8">Welcome to Our Website</h1>
+                </>
+              }
+            />
+            <Route path="/" element={<PropertyListing />} />
+            <Route path="/property/:propertyName" element={<PropertyDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
           </Routes>
