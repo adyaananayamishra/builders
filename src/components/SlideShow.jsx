@@ -50,21 +50,19 @@ const Slideshow = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] flex flex-col items-center justify-center text-white text-center px-4">
           <h2 className="text-3xl md:text-5xl font-bold">{slides[currentIndex].title}</h2>
           <p className="text-lg md:text-xl mt-2">{slides[currentIndex].subtitle}</p>
-          {/* <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-lg mt-4">
-            VIEW DETAIL
-          </button> */}
         </div>
 
        
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-neutral-600 p-2 text-white"
         >
           ❮
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-neutral-600
+          p-2 text-white"
         >
           ❯
         </button>
