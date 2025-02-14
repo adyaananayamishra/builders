@@ -38,8 +38,8 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center"><span className="mr-2">📞</span> 1800 212 6666</li>
             <li className="flex items-center"><span className="mr-2">📧</span> info@ProLandmarkHomes.in</li>
-            <li className="flex items-center"><span className="mr-2">📍</span> BMC Mall,
-            Saheednagar, Bhubaneswar, 751007</li>
+            <li className="flex items-center"><span className="mr-2">📍</span> BMC Bhawani Mall,
+            Saheed nagar, Bhubaneswar,Odisha 751007</li>
           </ul>
         </div>
       </div>

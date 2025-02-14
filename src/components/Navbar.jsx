@@ -33,10 +33,10 @@ const Navbar = () => {
   return (
     <div>
      
-      <nav className="bg-neutral-500 shadow-sm px-5">
+      <nav className="bg-neutral-800 shadow-sm px-5">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 ">
-            <img src="/logo.png" alt="Logo" className="h-26 w-30 object-contain text-4xl font-extrabold mr-4" />
+            <img src="/logo.png" alt="Logo" className="h-32 w-40 object-contain text-4xl font-extrabold lg mr-4" />
             
           </Link>
           <button

@@ -6,7 +6,7 @@ import PropertyList from "./components/PropertyList";
 import PropertyDetails from "./components/PropertyDetails";
 import PopularPlaces from "./components/PopularPlaces";
 import PlaceDetails from "./components/PlaceDetails";
-import OverView from "./components/OverView";
+import OverTeam from "./components/OverTeam";
 import Testimonials from "./components/Testimonial";
 import Newsletter from "./components/Newsletter";
 import Career from "./Pages/Career";
@@ -35,7 +35,7 @@ const App = () => {
                   <PropertyList/>
                   <PopularPlaces />
                   <Testimonials/>
-                  <OverView/>
+                  <OverTeam/>
                   <Newsletter/>
                 
                 </>
