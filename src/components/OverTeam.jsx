@@ -4,22 +4,22 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "Founder & CEO",
-    image: "public/assets/overteam-1.jpg",
+    image: "/overteam-1.jpg",
   },
   {
     name: "Jane Smith",
     role: "Lead Architect",
-    image: "public/assets/overteam-2.jpg",
+    image: "/overteam-2.jpg",
   },
   {
     name: "Mike Johnson",
     role: "Project Manager",
-    image: "public/assets/overteam-3.jpg",
+    image: "/overteam-3.jpg",
   },
   {
     name: "Emily Davis",
     role: "Interior Designer",
-    image: "public/assets/overteam-4.jpg",
+    image: "/overteam-4.jpg",
   },
 ];
 

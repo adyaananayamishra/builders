@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,12 +33,10 @@ const Navbar = () => {
 
   return (
     <div>
-     
       <nav className="bg-neutral-800 shadow-sm px-5">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2 ">
-            <img src="/logo.png" alt="Logo" className="h-32 w-40 object-contain text-4xl font-extrabold lg mr-4" />
-            
+          <Link to="/" className="flex items-center space-x-2">
+            <img src="/logo.png" alt="Logo" className="h-32 w-40 object-contain" />
           </Link>
           <button
             className="text-gray-300 hover:text-blue-600 focus:outline-none"
@@ -54,12 +53,9 @@ const Navbar = () => {
 
       {/* Menu Overlay */}
       {isMenuOpen && (
-       <div className="fixed top-0 right-0 h-full w-[80%] bg-neutral-800 bg-opacity-90 text-white z-50 shadow-lg">
+        <div className="fixed top-0 right-0 h-full w-[80%] bg-neutral-800 bg-opacity-90 text-white z-50 shadow-lg">
           <div className="absolute top-4 right-4">
-            <button
-              onClick={toggleMenu}
-              className="text-2xl font-bold focus:outline-none"
-            >
+            <button onClick={toggleMenu} className="text-2xl font-bold focus:outline-none">
               ✕
             </button>
           </div>
@@ -71,15 +67,17 @@ const Navbar = () => {
             <li>
               <div
                 onClick={() => toggleDropdown("properties")}
-                className="cursor-pointer font-semibold"
+                className="cursor-pointer font-semibold flex justify-center items-center gap-2"
               >
-                Properties {activeDropdown === "properties" ? "-" : "+"}
+                Properties {activeDropdown === "properties" ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {activeDropdown === "properties" && (
                 <ul className="ml-4 mt-2 space-y-2 text-sm">
-                  <li><Link to="/properties/apartments">Apartments</Link></li>
+                  <li><Link to="/properties/apartments">Apartment</Link></li>
                   <li><Link to="/properties/cottage">Cottage</Link></li>
                   <li><Link to="/properties/bungalow">Bungalow</Link></li>
+                  <li><Link to="/properties/simplex">Simplex</Link></li>
+                  <li><Link to="/properties/duplex">Duplex</Link></li>
                 </ul>
               )}
             </li>
@@ -88,48 +86,36 @@ const Navbar = () => {
             <li>
               <div
                 onClick={() => toggleDropdown("location")}
-                className="cursor-pointer font-semibold"
+                className="cursor-pointer font-semibold flex justify-center items-center gap-2"
               >
-                Location {activeDropdown === "location" ? "-" : "+"}
+                Location {activeDropdown === "location" ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {activeDropdown === "location" && (
                 <ul className="ml-4 mt-2 space-y-2 text-sm">
-                 
                   <li>
                     <div
                       onClick={() => toggleSubDropdown("odisha")}
-                      className="cursor-pointer font-semibold"
+                      className="cursor-pointer font-semibold flex justify-center items-center gap-2"
                     >
-                      Odisha {subDropdown === "odisha" ? "-" : "+"}
+                      Odisha {subDropdown === "odisha" ? <FaChevronUp /> : <FaChevronDown />}
                     </div>
                     {subDropdown === "odisha" && (
                       <ul className="ml-4 mt-2 space-y-2 text-sm">
-                        
                         <li>
                           <div
                             onClick={() => toggleThirdDropdown("bhubaneswar")}
-                            className="cursor-pointer font-semibold"
+                            className="cursor-pointer font-semibold flex justify-center items-center gap-2"
                           >
-                            Bhubaneswar {thirdDropdown === "bhubaneswar" ? "-" : "+"}
+                            Bhubaneswar {thirdDropdown === "bhubaneswar" ? <FaChevronUp /> : <FaChevronDown />}
                           </div>
                           {thirdDropdown === "bhubaneswar" && (
                             <ul className="ml-4 mt-2 space-y-2 text-sm">
-                              <li><Link to="/location/sahid-nagar">Sahid Nagar</Link></li>
                               <li><Link to="/location/patrapada">Patrapada</Link></li>
                               <li><Link to="/location/khandagiri">Khandagiri</Link></li>
-                              <li><Link to="/location/jaydev-vihar">Jaydev Vihar</Link></li>
-                              <li><Link to="/location/bapuji-nagar">Bapuji Nagar</Link></li>
-                              <li><Link to="/location/rasulgarh">Rasulgarh</Link></li>
                               <li><Link to="/location/tamando">Tamando</Link></li>
-                              <li><Link to="/location/nayapalli">Nayapalli</Link></li>
-                              <li><Link to="/location/sundarpada">Sundarpada</Link></li>
-                              <li><Link to="/location/dumduma">Dumduma</Link></li>
-                              <li><Link to="/location/jharpada">Jharpada</Link></li>
-                              <li><Link to="/location/hanspal">Hanspal</Link></li>
-                              <li><Link to="/location/chandrasekharpur">Chandrasekharpur</Link></li>
-                              <li><Link to="/location/baramunda">Baramunda</Link></li>
-                              <li><Link to="/location/palasuni">Palasuni</Link></li>
-                              <li><Link to="/location/mancheswar">Mancheswar</Link></li>
+                              <li><Link to="/location/nayapalli">Pahala</Link></li>
+                              <li><Link to="/location/sundarpada">Trisulia</Link></li>
+                              <li><Link to="/location/dumduma">KalingaNagar</Link></li>
                             </ul>
                           )}
                         </li>
@@ -151,3 +137,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
