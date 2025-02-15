@@ -4,7 +4,7 @@ const Career = () => {
   return (
     <div className="text-center p-6 max-w-4xl mx-auto">
       <img
-        src="src/assets/career.jpg"
+        src="/career.jpg"
         alt="Career Opportunities"
         className="w-90 h-60 object-cover rounded-lg mb-6"
       />
