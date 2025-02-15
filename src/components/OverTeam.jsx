@@ -33,11 +33,12 @@ const OurTeam = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-4 text-center">
-            <img
+           <img
               src={member.image}
               alt={member.name}
-              className="w-24 h-24 mx-auto mb-4 object-cover"
-            />
+            className="w-32 h-32 mx-auto mb-4 object-cover border-4 border-gray-200 shadow-lg"
+/>
+
             <h3 className="text-xl font-semibold">{member.name}</h3>
             <p className="text-gray-500">{member.role}</p>
           </div>
