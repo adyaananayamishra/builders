@@ -58,7 +58,7 @@ const Terms = () => {
             <h2 className="font-semibold text-gray-800">6. Visitor Information</h2>
             <p className="text-gray-700 text-sm">
               The visitor has, by the act of logging onto the website and/or submitting information or giving their name, address, 
-              or email addresses as identification to thePro Landmark Homes Private Limited through the website, deemed to have consented 
+              or email addresses as identification to the Pro Landmark Homes Private Limited through the website, deemed to have consented 
               and has expressly and irrevocably authorized Pro Landmark Homes Private Limited to use, reveal, analyze, or display and 
               transmit all information and documents as may be required by it. If any information is found to be untrue, inaccurate, 
               or incomplete, the Pro Landmark Homes Private Limited has the right to take any action it deems appropriate without any limitation.
