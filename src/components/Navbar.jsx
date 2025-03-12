@@ -36,7 +36,7 @@ const Navbar = () => {
       <nav className="bg-neutral-800 shadow-sm px-5">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Logo" className="h-32 w-40 object-contain" />
+            <img src="/logo.png" alt="Logo" className="h-23 w-30 object-contain" />
           </Link>
           <button
             className="text-gray-300 hover:text-blue-600 focus:outline-none"
@@ -137,5 +137,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
